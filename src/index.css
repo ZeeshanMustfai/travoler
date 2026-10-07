@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ---------------------------------------------------------------
+     LIGHT THEME  (source: "Royal · Blue & Gold — Light")
+  --------------------------------------------------------------- */
+  :root {
+    --background: 223 78% 98%; /* #F7F9FE */
+    --foreground: 223 63% 15%; /* #0E1B3D */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 223 63% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 63% 15%;
+
+    --primary: 45 80% 55%; /* gold #E8B931 */
+    --primary-foreground: 225 71% 16%; /* navy #0C1B47 */
+
+    --secondary: 224 65% 97%; /* #F1F4FC */
+    --secondary-foreground: 223 63% 15%;
+
+    --muted: 224 65% 97%;
+    --muted-foreground: 222 23% 36%; /* #475472 */
+
+    --accent: 224 76% 48%; /* brand blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 223 47% 93%; /* #E3E8F5 */
+    --input: 223 47% 90%;
+    --ring: 224 76% 48%;
+
+    /* Brand */
+    --gold: 45 80% 55%; /* #E8B931 */
+    --gold-foreground: 225 71% 16%;
+    --eyebrow: 45 77% 31%; /* #8A6D12 deep gold for text on light */
+    --brand-blue: 224 76% 48%; /* #1D4ED8 */
+    --brand-navy: 225 71% 16%; /* #0C1B47 */
+
+    --surface: 0 0% 100%;
+    --surface-alt: 224 65% 97%; /* #F1F4FC */
+    --surface-strong: 224 60% 94%; /* #E8EEFD */
+
+    --footer: 223 63% 15%; /* dark navy footer even in light */
+    --footer-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+  }
+
+  /* ---------------------------------------------------------------
+     DARK THEME  (source: "Royal · Blue & Gold — Deep")
+  --------------------------------------------------------------- */
+  .dark {
+    --background: 225 71% 16%; /* #0C1B47 */
+    --foreground: 0 0% 100%;
+
+    --card: 223 69% 24%; /* #132A66 */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 223 69% 24%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 45 80% 55%; /* gold */
+    --primary-foreground: 225 71% 16%;
+
+    --secondary: 224 71% 20%; /* #0F2257 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 224 71% 20%;
+    --muted-foreground: 224 49% 81%; /* #B6C3E6 */
+
+    --accent: 224 76% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 226 59% 30%; /* #1F3478 */
+    --input: 224 71% 20%;
+    --ring: 45 80% 55%;
+
+    --gold: 45 80% 55%;
+    --gold-foreground: 225 71% 16%;
+    --eyebrow: 45 80% 55%; /* gold reads as-is on dark */
+    --brand-blue: 224 76% 48%;
+    --brand-navy: 225 71% 16%;
+
+    --surface: 223 69% 24%; /* #132A66 */
+    --surface-alt: 224 71% 20%; /* #0F2257 */
+    --surface-strong: 226 56% 37%; /* #2A4394 */
+
+    --footer: 225 75% 12%; /* #081437 */
+    --footer-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    @apply bg-gold text-gold-foreground;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    color: hsl(var(--eyebrow));
+  }
+  .font-display {
+    font-family: "Sora", sans-serif;
+  }
+  .font-mono {
+    font-family: "Geist Mono", monospace;
+  }
+}
